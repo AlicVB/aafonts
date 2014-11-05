@@ -244,6 +244,16 @@ c_v_for_e = unicode(0x2592);
 c_vl_for_e = unicode(0x2593);
 c_w_for_e = unicode(0x2594);
 c_wl_for_e = unicode(0x2595);
+c_o1_for_e = unicode(0x2596);
+c_o2_for_e = unicode(0x2597);
+c_o3_for_e = unicode(0x2598);
+c_o4_for_e = unicode(0x2599);
+c_o5_for_e = unicode(0x259a);
+c_o1l_for_e = unicode(0x259b);
+c_o2l_for_e = unicode(0x259c);
+c_o3l_for_e = unicode(0x259d);
+c_o4l_for_e = unicode(0x259e);
+c_o5l_for_e = unicode(0x259f);
 
 t_spaces = (unicode(0x0007), unicode(0x0020), unicode(0x00a0));
 
@@ -271,6 +281,7 @@ t_non_attach += (unicode(0x2026), unicode(0x2030), unicode(0x20ac), unicode(0x22
 
 t_hight_end = (c_b, c_o, c_v, c_w, c_bh, c_ol, c_vl, c_wl, c_o1, c_o2, c_o3, c_o4, c_o1l, c_o2l, c_o3l, c_o4l, c_o5l);
 t_hight_end += (c_b_for_e, c_bh_for_e, c_o_for_e, c_ol_for_e, c_v_for_e, c_vl_for_e, c_w_for_e, c_wl_for_e);
+t_hight_end += (c_o1_for_e, c_o2_for_e, c_o3_for_e, c_o4_for_e, c_o5_for_e, c_o1l_for_e, c_o2l_for_e, c_o3l_for_e, c_o4l_for_e, c_o5l_for_e);
 
 t_low_end = (c_a, c_c, c_d, c_e, c_f, c_g, c_h, c_i, c_j, c_k, c_l, c_m, c_n, c_p, c_q, c_r, c_s, c_t, c_u, c_x, c_y, c_z);
 t_low_end += (c_al, c_cl, c_dl, c_gl, c_ml, c_nl, c_ql, c_xl, c_yl, c_eh, c_fh, c_hh, c_ih, c_jh, c_kh, c_lh, c_ph, c_rh, c_sh, c_th, c_uh, c_zh, c_s_l, c_s_h);
@@ -286,6 +297,7 @@ t_small += (c_a1, c_a2, c_a3, c_a4, c_a5, c_a6, c_c1, c_e1, c_e2, c_e3, c_e4, c_
 t_small += (c_a1l, c_a2l, c_a3l, c_a4l, c_a5l, c_a6l, c_c1l, c_e1h, c_e2h, c_e3h, c_e4h, c_i1h, c_i2h, c_i3h, c_i4h, c_n1l, c_u1h, c_u2h, c_u3h, c_u4h);
 t_small += (c_o1, c_o2, c_o3, c_o4, c_o1l, c_o2l, c_o3l, c_o4l, c_o5l, c_ae, c_oe, c_oel, c_ael);
 t_small += (c_o_for_e, c_ol_for_e, c_v_for_e, c_vl_for_e, c_w_for_e, c_wl_for_e);
+t_small += (c_o1_for_e, c_o2_for_e, c_o3_for_e, c_o4_for_e, c_o5_for_e, c_o1l_for_e, c_o2l_for_e, c_o3l_for_e, c_o4l_for_e, c_o5l_for_e);
 
 t_e = (c_e, c_e1, c_e2, c_e3, c_e4, c_eh, c_e1h, c_e2h, c_e3h, c_e4h);
 
@@ -410,10 +422,20 @@ c_a6 > c_a6l / t_low_end _;
 c_ae > c_ael / t_low_end _;
 c_c1 > c_c1l / t_low_end _;
 c_n1 > c_n1l / t_low_end _;
+c_o1 > c_o1l_for_e / t_low_end _ t_e;
+c_o1 > c_o1_for_e / _ t_e;
 c_o1 > c_o1l / t_low_end _;
+c_o2 > c_o2l_for_e / t_low_end _ t_e;
+c_o2 > c_o2_for_e / _ t_e;
 c_o2 > c_o2l / t_low_end _;
+c_o3 > c_o3l_for_e / t_low_end _ t_e;
+c_o3 > c_o3_for_e / _ t_e;
 c_o3 > c_o3l / t_low_end _;
+c_o4 > c_o4l_for_e / t_low_end _ t_e;
+c_o4 > c_o4_for_e / _ t_e;
 c_o4 > c_o4l / t_low_end _;
+c_o5 > c_o5l_for_e / t_low_end _ t_e;
+c_o5 > c_o5_for_e / _ t_e;
 c_o5 > c_o5l / t_low_end _;
 c_oe > c_oel / t_low_end _;
 
